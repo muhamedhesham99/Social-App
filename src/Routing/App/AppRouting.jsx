@@ -50,7 +50,7 @@ export const Routes = createBrowserRouter([
     ],
   },
 
-  /************************** Register & Login Pages **********************/ 
+  /************************** Register & Login Pages **********************/
   {
     path: "/auth",
     element: (
