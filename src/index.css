@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@plugin './hero.js';
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #bf4646; /*base color for headers || important buttons*/
+  --color-secondary: #eddcc6; /*for background || body*/
+  --color-accent1: #fff4ea; /*for posts || sub sections*/
+  --color-accent2: #7eacb5; /*for secondry buttons || heighlights*/
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  background-color: var(--color-secondary);
+}
+
+.active {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.btn {
+  @apply text-primary font-medium bg-accent1 hover:bg-primary hover:text-secondary;
+}
+
+.shadow {
+  @apply shadow-2xl shadow-accent1/50;
+}
