@@ -2,12 +2,14 @@ import { Outlet } from "react-router-dom";
 import { FaRegBookmark, FaRegNewspaper } from "react-icons/fa";
 import { LuSparkles } from "react-icons/lu";
 import { IoEarthOutline } from "react-icons/io5";
+import { GoHomeFill } from "react-icons/go";
 import HomeSideNavButton from "../../Components/Shared/HomeSideNavButton";
 import PostCreate from "../../Components/Shared/PostCreate";
 import SuggestedFriends from "../../Components/Shared/SuggestedFriends";
 
 export const Home = () => {
   const sideNavButtonsData = [
+    { path: "/home", icon: <GoHomeFill />, title: "Home" },
     { path: "/home/feed", icon: <FaRegNewspaper />, title: "Feed" },
     { path: "/home/myposts", icon: <LuSparkles />, title: "My Posts" },
     { path: "/home/community", icon: <IoEarthOutline />, title: "Community" },

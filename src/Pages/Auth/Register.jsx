@@ -67,7 +67,9 @@ export const Register = () => {
       setDataStatus(true); // handle data status to show alert when submit
       setAlertMessage(message); // Alert message when response is success or has error
       reset(); // reset after sending data
-      window.location.href = "/auth/login"; // i use location.href instead of navigate() due to reload AuthLayout page where has login and register components to confirm the if-statement of bg color of login, register button
+      setTimeout(() => {
+        window.location.href = "/auth/login"; // i use location.href instead of navigate() due to reload AuthLayout page where has login and register components to confirm the if-statement of bg color of login, register button
+      }, 3000); // set timeOut after 3s redirect to signIn
     } catch (error) {
       setDataStatus(false); // handle data status to show alert when submit
       setAlertMessage(error.response.data.message); // Alert message when response is success or has error

@@ -56,7 +56,8 @@ const ProfileCard = ({
               alt={myProfileData.name}
               height={112}
               radius="sm"
-              src={myProfileData.photo}
+              src={
+                myProfileData.photo}
               width={112}
               className="rounded-full border-4 border-white object-cover shadow-md ring-2 ring-secondary "
             />
